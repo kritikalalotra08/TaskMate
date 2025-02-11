@@ -1,0 +1,139 @@
+/* Basic Style */
+body {
+    background: #f8f0ff; /* Light pastel purple background */
+    color: #333; /* Neutral text color */
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: block;
+    width: 500px;
+    margin: 50px auto 0;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 10px,
+        #f8f0ff 10px,
+        #f8f0ff 20px
+    ); /* Subtle striped pattern */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 28px; /* Larger size for emphasis */
+    font-weight: bold;
+    color: #7b57b3; /* Vibrant pastel purple for the main heading */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Adds a professional touch */
+}
+
+h3,
+label[for='new-task'] {
+    color: #7b57b3; /* Subtle pastel purple for headings */
+    font-weight: bold;
+    font-size: 18px; /* Slightly larger font size */
+    padding: 15px 0 5px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 2px solid #d3cce3; /* Subtle bottom border for separation */
+    letter-spacing: 1.2px; /* Slightly spaced letters */
+}
+
+/* Input and Buttons */
+input[type="text"] {
+    font-size: 16px;
+    line-height: 18px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    background: #fff; /* Clean white background */
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    color: #4a4a4a;
+    width: calc(100% - 120px); /* Adjusted width for alignment with button */
+}
+
+input[type="text"]:focus {
+    border-color: #7b57b3; /* Purple focus indicator */
+    outline: none;
+}
+
+button {
+    background: #7b57b3; /* Primary button color */
+    color: #fff; /* White text for contrast */
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #5a3f91; /* Darker purple on hover */
+}
+
+/* Task Lists */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: #fff; /* Clean white background for tasks */
+    transition: box-shadow 0.3s ease;
+}
+
+li:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+}
+
+li label {
+    flex: 1;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #333;
+}
+
+li input[type="checkbox"] {
+    transform: scale(1.2); /* Slightly larger checkboxes */
+    cursor: pointer;
+}
+
+li button.delete {
+    background: none;
+    color: #cf2323; /* Red color for delete button */
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+li button.delete:hover {
+    color: #c9302c; /* Darker red on hover */
+}
+
+/* Completed Tasks */
+#completed-tasks label {
+    text-decoration: line-through;
+    color: #888;
+}
